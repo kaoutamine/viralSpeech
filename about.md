@@ -1,12 +1,18 @@
 ---
 layout: page
-title: About us and our project
+title: About
+permalink: /about/
 ---
 
-We are four EPFL students with an interest in data processing and analysis using advanced data science tools. This project's dataset is called Quotebank and consists of quotes 
-that were identified in newspapers articles and when possible assigned possible authors. Combining this with Wikidata to get info on the speakers, we try to explore the data
-and compile information and understand interesting things about this dataset using data visualization, Machine learning, NLP processing and other techniques.
+This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
 
-- focus and topic area
-- people involved
-- code and projects used
+You can find the source code for Minima at GitHub:
+[jekyll][jekyll-organization] /
+[minima](https://github.com/jekyll/minima)
+
+You can find the source code for Jekyll at GitHub:
+[jekyll][jekyll-organization] /
+[jekyll](https://github.com/jekyll/jekyll)
+
+
+[jekyll-organization]: https://github.com/jekyll
