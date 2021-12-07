@@ -10,3 +10,10 @@ and compile information and understand interesting things about this dataset usi
 - focus and topic area
 - people involved
 - code and projects used
+
+---
+layout: page
+---
+<div style="background:black; color: white; padding: 25px;">
+    {{ content }}
+</div>
