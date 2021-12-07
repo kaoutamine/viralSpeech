@@ -6,4 +6,4 @@ author:
 description: "A project on the quotebank dataset"
 
 # Build settings
-theme: github-light
+theme: minima
