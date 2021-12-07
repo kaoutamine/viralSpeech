@@ -1,5 +1,9 @@
 # Site settings
 title: A study on what helps catch the attention of modern day fickle newsreaders
+
+{% include video-embed.html youtubeid="SWVjQsvQocA" %}
+
+
 author: 
   name: Tamine   
   email: kaourintin.tamine@epfl.ch
