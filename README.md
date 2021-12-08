@@ -1,17 +1,36 @@
-# The Interesting Times - Jekyll Theme
-
-[Live Demo](https://ohduran.github.io/the-interesting-times) &nbsp; | &nbsp; [Download](https://github.com/ohduran/the-interesting-times/archive/master.zip) &nbsp; | &nbsp; [Support me on Patreon](https://patreon.com/alvaroduran)
-
-![mediumish](assets/images/the-interesting-times.png)
-
-### Copyright
-
-Copyright (C) 2019 Alvaro Duran, https://www.alvaroduran.com
-
-**The Interesting Times theme for Jekyll** is designed and developed by [Alvaro](https://alvaroduran.com) and it is *free* under [MIT license](https://alvaroduran.mit-license.org/).
-
-<a href="https://patreon.com/alvaroduran" target="_blank">Support me on Patreon</a>
 
 
 
-Thank you!
+
+
+
+
+
+
+
+
+ 
+
+
+
+ 
+
+
+# Moon Jekyll Theme [![Donate](https://img.shields.io/badge/paypal-donate-blue.svg)](https://www.paypal.me/taylantatli/0usd)  
+  
+
+**[Moon](https://taylantatli.github.io/Moon)** is a minimal, one column jekyll theme.
+
+## Features
+* Minimal, you can focus on your content
+* Responsive
+* Disqus integration
+* Syntax highlighting
+* Optional post image
+* Social icons
+* Page for sharing projects
+* Optional background image
+* Simple navigation menu
+* MathJax support
+
+
