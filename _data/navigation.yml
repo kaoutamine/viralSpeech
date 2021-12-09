@@ -1,16 +1,16 @@
 # Site navigation links
 
-- title: Home
-  url: /
+#- title: Home
+#  url: /
 
-- title: The Quotebank
-  url: /quotebank/
+#- title: The Quotebank
+#  url: /quotebank/
   
-- title: Extracting features from the quotebank
-  url: /feature_extraction/
+#- title: Extracting features from the quotebank
+#  url: /feature_extraction/
   
-- title: Predict the virality of a quote from the extracted features
-  url: /predict_virality/
+#- title: Predict the virality of a quote from the extracted features
+#  url: /predict_virality/
 
-- title: About us
-  url: /aboutus/
+#- title: About us
+#  url: /aboutus/
