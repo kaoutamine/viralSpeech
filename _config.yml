@@ -1,7 +1,7 @@
 # Site
 title:              "What makes a quote viral ?"
-bio:                'A study on a quotebank on what it takes to have a viral speech'
-description:        "This is in the context of the applied data analysis course at EPFL"
+bio:                'A study on a quotebank on what it takes to have a viral speech.'
+description:        "This study has been carried on in the context of applied data analysis course at EPFL."
 reading_time:       true
 words_per_minute:   200
 logo:               'assets/img/logo.png'
