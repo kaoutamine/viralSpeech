@@ -13,7 +13,7 @@ url:                https://kaoutamine.github.io/viralSpeech/
 # Jekyll
 permalink:          /:title/
 markdown:           kramdown
-highlighter:        noir
+highlighter:        rouge
 kramdown:
   auto_ids:         true
   footnote_nr:      1
