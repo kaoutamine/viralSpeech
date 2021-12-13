@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About our project
+title: About us
 date: 08-12-2021
 comments: false
 ---
