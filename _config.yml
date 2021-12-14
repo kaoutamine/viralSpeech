@@ -1,7 +1,7 @@
 # Site
 title:              "What makes a quote viral ?"
-bio:                'A study of a quotebank on what it takes to have a viral speech.'
-description:        "This study has been carried on in the context of applied data analysis course at EPFL."
+bio:                'A study on what it takes to make your sentences repeatable.'
+description:        "This study has been carried on in the context of Applied Data Analysis course at EPFL."
 reading_time:       true
 words_per_minute:   200
 logo:               'assets/img/viral_icon.svg'
