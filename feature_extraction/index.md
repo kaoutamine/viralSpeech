@@ -2,6 +2,9 @@
 layout: page
 title: Feature Extraction
 date: 08-12-2021
+comments: false
+---
+
 Exploratory data analysis can be done by hand parsing through data and generating statistical graphs (length of tweets, who said it, the date, the amount of citations…). 
 
 Because of recent advances in computational techniques, a whole new field called NLP (Natural Language Processing) allows us to completely shift the analysis paradigm. This allows us to directly address the semantics of the tweets instead of trying to extract relevant information from mathematical features.
@@ -20,8 +23,5 @@ Similarly to bertTopic, vaderSentiment’s main idea is to classify our quotes i
 
 ##The results of vaderSentiment : 
 Plots + comments 
-
-comments: false
----
     
 
