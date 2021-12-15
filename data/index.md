@@ -5,7 +5,10 @@ date: 08-12-2021
 comments: false
 ---
 
+
 The goal of this project is to predict which factor that caractherize a quote contributes for make it viral. For this purpose we use the Quotebank dataset complemented with the informations collected from Wikidata. Quotebank consist of a dataset of 178 million unique quotations, extracted from 196 million Engish news papers pubished between Agoust 2008 and April 2020. Wikidata is a databese containing information about a subjects being in Wikimedia. Therefore we will use it to gather the charactheristics about the speaker of each of the quotes.
+
+{% include data.png %}
 
 Before diving into the question we will start by exploring the data extracted from both dataset. The first thig that we will do is to define what is a viral quote. For doing so we have analyzed the number of occurences of all the quotes present in Quotebank. We see that the majority of the quotes occours one time and that the 99% of them occures less than 100 times. For this reason we decided to set the threshold for defining a vira quote at 100 occurences. Therefore we obtained that in our dataset only the 0.5% of quotes are viral.
 
