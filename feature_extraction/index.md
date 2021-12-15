@@ -24,3 +24,7 @@ Similarly to bertTopic, vaderSentiment’s main idea is to classify our quotes i
 ## The results of vaderSentiment : 
 Plots + comments 
 
+
+
+<img src="../assets/img/plots_feature_extraction/feature_extraction.png">
+

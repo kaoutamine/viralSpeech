@@ -24,5 +24,4 @@ After studying how the features of speakers may infuence the virality of the quo
 
 
 
-
-{% include plots_data/plotly_graph_example.html %}
+<img src="../assets/img/plots_data/raw_data.png">
