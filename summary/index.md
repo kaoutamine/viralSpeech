@@ -16,8 +16,8 @@ We have yet again successfully shown it is possible to train multiple  machine l
 ## And that's when we talk about what did not work
 Analysis of the results of these different models show that overall, they do "sense" that some features are relevant and there is indeed at least partial predictability of quote popularity.
 But the fact that they do not work is actually good, and quite reassuring! The real world is an extremely complicated object and if quote popularity were reliably predictable with the mathematical tools used we would be quite rich right now! It totally makes sense, and the statement we have to extract from our models is the following : 
-"Only fools would try to predict everything from a bunch of data that is very disconnected from the real world and obviously very incomplete". A good warning and reminder for all fellow
-data scientists out there that not everything can be solved by fitting a model, it can sometimes be only a part of the solution.
+"Only fools would try to predict everything from a bunch of data that is very disconnected from the real world and obviously very incomplete". Here the data is incomplete because we do not
+tell our model what trend is going on in the real world, who is the current president, who is the current newspaper writer at the NY Times and what he enjoys and a bunch of features that can randomly be a part of what makes one specific quote popular... A good warning and reminder for all fellow data scientists out there that not everything can be solved by creating a big dataset and fitting a model, it can sometimes be only a part of the solution, or not a solution at all.
 
 
 
