@@ -91,16 +91,43 @@ body {
         width: 90%;
     }
 }
+
+.container-profile {
+    width: 48rem;
+    max-width: 680px;
+    padding-bottom: 15px;
+    margin-left: 0px;
+    margin-right: 0px;
+    @include center-block();
+    background-color: $color_shark;
+    color: $white;
+    z-index: 1;
+    border-radius: 0px;
+    box-shadow: 0 0 10px 0 rgba($color_shark,0.3);
+    @include transition(.5s);
+
+    @media #{$small} {
+        width: 100%;
+        box-shadow: none;
+    }
+
+    @media #{$medium} {
+        width: 90%;
+    }
+}
+
 .row {
-	margin-top: 30px;
-	text-align: center;
-	.title {
-	    margin-top: 0;
-	    margin-bottom: 15px;
-	}
-	@media #{$small} {
-		padding: 0 1em;
-	}
+    margin-top: 30px;
+    text-align: center;
+
+    .title {
+        margin-top: 0;
+        margin-bottom: 15px;
+    }
+
+    @media #{$small} {
+        padding: 0 1em;
+    }
 }
 .wrapper {
     width: 75%;
