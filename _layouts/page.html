@@ -17,11 +17,11 @@ layout: compress
             <div class="content">
                 <div class="post-title {% if page.feature %} feature {% endif %}">
                     <h1>{{ page.title }}</h1>
-                    {%include nav_buttons.html%}
+                    {%include nav_buttons_top.html%}
                 </div>
                 {{ content }}
                 <div class="bottom-nav">
-                    {%include nav_buttons.html%}
+                    {%include nav_buttons_bottom.html%}
                 </div>
             </div>
         </div>
