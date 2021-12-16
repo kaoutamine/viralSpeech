@@ -12,4 +12,4 @@ The models used for the research are linear regression (a mathematical model for
 
 Now let's check out the results and see if we find anything satisfying from our two models.
 
-<img src="../assets/img/models">
+<img src="../assets/img/models.jpg">

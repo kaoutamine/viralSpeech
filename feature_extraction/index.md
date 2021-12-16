@@ -24,7 +24,15 @@ Similarly to bertTopic, vaderSentiment’s main idea is to classify our quotes i
 ## The results of vaderSentiment : 
 Plots + comments 
 
+<div align="center"> {%include plotly_graphs/age_hist.html%}</div>
+<div align="center"> {%include plotly_graphs/gender_hist.html%}</div>
+<div align="center"> {%include plotly_graphs/nationality_hist.html%}</div>
+<div align="center"> {%include plotly_graphs/occupation_hist.html%}</div>
+<div align="center"> {%include plotly_graphs/religion_hist.html%}</div>
+<div align="center"> {%include plotly_graphs/ethnic_group_hist.html%}</div>
 
+<div align="center"> {%include plotly_graphs/visualize_topics.html%}</div>
+<div align="center"> {%include plotly_graphs/visualize_hierarchy.html%}</div>
 
 <img src="../assets/img/plots_feature_extraction/feature_extraction.png">
 

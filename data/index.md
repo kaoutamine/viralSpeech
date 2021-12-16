@@ -24,3 +24,5 @@ For this study we are also interested on how the combination of different featur
 Finally, by looking at the occupation in combination with nationality we can see that politicians are the most quoted aross all countries. Howevere, we can clearly notice that there are some professions which are very uncommon in certain nations while being very common in others. A clear exemple of this is the american football player occupation, which is completely missing from countries such as India and Russia. As in previous cases, when we will need to pay attention to the coefficient assigned by the models to the nationality when one of the unbalanced professions is deemed important to describe the virality.
 
 After studying how the features of speakers may infuence the virality of the quote, we now concentrate on the actual characteristics for each single quotes. As first thing, We analyzed the distributions of lenghts of all quotes in Quotebank. From these results we can observe that 50% of the quotes have a length smaller than 20 words and that 95% of the quotes are less than 60 words.
+
+<img src="../assets/img/plots_data/occ_hist.svg">
