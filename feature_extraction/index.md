@@ -7,8 +7,7 @@ comments: false
 ## What can we learn from a quote
 
 After analysing how the characteristic of the different quoted speakers influences the virality of what they write, we are now corious to see if we can extract meaningfull informations directly from the quote itself.
-
-    Exploratory data analysis can be done by hand parsing through data and generating statistical graphs (length of tweets, who said it, the date, the amount of citations…). 
+Exploratory data analysis can be done by hand parsing through data and generating statistical graphs (length of tweets, who said it, the date, the amount of citations…). 
 
 Because of recent advances in computational techniques, a whole new field called NLP (Natural Language Processing) allows us to completely shift the analysis paradigm. This allows us to directly address the semantics of the quotes instead of trying to extract relevant information from mathematical features.
 To achieve this on our dataset, we used two libraries : bertTopic and vaderSentiment.
@@ -29,6 +28,8 @@ To explain briefly without going into mathematical details, BertTopic allows us 
 => show the topic split and comment on the fact that it just shows the basic distribution of newspaper stories (politics then sports with specifically american football then research breakthroughs etc)
 
 <div align="center"> {%include plotly_graphs/visualize_topics.html%}</div>
+
+$\n$
 
 | Topic | Representative words                                                                                    |
 |-------|---------------------------------------------------------------------------------------------------------|
