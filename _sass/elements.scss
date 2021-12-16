@@ -201,6 +201,12 @@ kbd {
     border-color: transparent transparent $color_tuatara !important;
 }
 
+table, th, td {
+    border: 1px solid white;
+    border-collapse: collapse;
+    text-align: center;
+}
+
 // reading time
 .reading-time {
     text-align: center;
