@@ -22,6 +22,8 @@ Before diving into the question we will start by exploring the data extracted fr
 
 After difining the notion of virality, we are interested into finding the relevant features that may have an impact on the virality of the quote. Initially. we explored the distribution of the speaker’s features weighted by the nuber of occurences for each quote.
 
+
+<!--
 <!--div align="center"> {%include plotly_graphs/age_hist.html%}</div-->
 By observing the datage distributions we can see that more than half of the speakre in our dataset have an age that ranges between 19 and 66. This is expected since the speakers benefitting from media coverage are mainly young adults and middle-aged men.
 
@@ -41,3 +43,4 @@ After studying how the features of speakers may infuence the virality of the quo
 
 
 
+-->
