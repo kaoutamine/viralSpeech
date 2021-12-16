@@ -12,7 +12,7 @@ The goal of this project is to predict which factor that characterize a quote co
 
 ## What makes a quote to be viral
 
-<!--img src="../assets/img/plots_data/occ_hist.svg"-->
+<img src="../assets/img/plots_data/occ_hist.svg">
 
 Before diving into the question we will start by exploring the data extracted from both dataset. The first thig that we will do is to define what is a viral quote. For doing so we have analyzed the number of occurences of all the quotes present in Quotebank. We see that the majority of the quotes occours one time and that the 99% of them occures less than 100 times. For this reason we decided to set the threshold for defining a vira quote at 100 occurences. Therefore we obtained that in our dataset only the 0.5% of quotes are viral.
 
