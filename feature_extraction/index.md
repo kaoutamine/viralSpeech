@@ -29,7 +29,6 @@ To explain briefly without going into mathematical details, BertTopic allows us 
 
 <div align="center"> {%include plotly_graphs/visualize_topics.html%}</div>
 
-$\n$
 
 | Topic | Representative words                                                                                    |
 |-------|---------------------------------------------------------------------------------------------------------|
