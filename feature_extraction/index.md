@@ -12,7 +12,7 @@ Exploratory data analysis can be done by hand parsing through data and generatin
 Because of recent advances in computational techniques, a whole new field called NLP (Natural Language Processing) allows us to completely shift the analysis paradigm. This allows us to directly address the semantics of the quotes instead of trying to extract relevant information from mathematical features.
 To achieve this on our dataset, we used two libraries : bertTopic and vaderSentiment.
 
-<img src="../assets/img/plots_feature_extraction/feature_extraction.png">
+<img src="../assets/img/plots_feature_extraction/feature_extraction.svg">
 
 The first information that we can extract from a quote is its length. By analysing all the quotes contined in the Quotebank dataset we can observe that observe that 50% of the quotes have a length smaller than 20 words and that 95% of the quotes have less than 60 words.
 
