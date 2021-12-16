@@ -28,6 +28,8 @@ To explain briefly without going into mathematical details, BertTopic allows us 
 ## The results of bertTopic : 
 => show the topic split and comment on the fact that it just shows the basic distribution of newspaper stories (politics then sports with specifically american football then research breakthroughs etc)
 
+<div align="center"> {%include plotly_graphs/visualize_topics.html%}</div>
+
 | Topic | Representative words                                                                                    |
 |-------|---------------------------------------------------------------------------------------------------------|
 | 0     | her, she, herself, hillary, clinton, lady, kim, sarah, actress, daughter                                |
@@ -44,6 +46,7 @@ To explain briefly without going into mathematical details, BertTopic allows us 
 
 From the BerTopic model we have extracted the most relevant topics observed in the dataset. The most frequent topic contains female pronouns and names of the most relevant symbol of the female gender like Hillary Clinton. This is quite surprising since in the previous sections we have observed that female speakers are far less represented in the number of quotes with respect to male. One reason for why we may observe such a frequent topic may be due to the 2016 Unites States of America elections, which was certainly an event that was given huge media coverage, and one in which Donald Trump did not refrain from using Hilary Clinton's name in multiple occasions. The second most frequent topic can be labeled as education. This result can be expected since it also is a common discussion topic in politics. Other topics that appears to be also relevant in the newspaper are related to sports like American football, baseball, fighting sports, football, and racing. This result too can be explained with the information obtained in the previous sections, since we have observed that males of USA nationality that plays American football and males of UK nationality playing football represent a big portion of the total quotes.
 
+<div align="center"> {%include plotly_graphs/visualize_hierarchy.html%}</div>
 
 ## What we wanted from vaderSentiment and what we expected  :
 Similarly to bertTopic, vaderSentiment’s main idea is to classify our quotes into sentiment based groups. The idea behind this is to see if we can find relevant information on how super popular quotes are structured. Are they mainly pessimistic or is it better for the quoter’s tone to be positive and optimistic, or it doesn’t actually matter, is one of the questions that we expect to be addressed by vaderSentiment.
@@ -51,14 +54,6 @@ Similarly to bertTopic, vaderSentiment’s main idea is to classify our quotes i
 ## The results of vaderSentiment : 
 Plots + comments 
 
-<div align="center"> {%include plotly_graphs/age_hist.html%}</div>
-<div align="center"> {%include plotly_graphs/gender_hist.html%}</div>
-<div align="center"> {%include plotly_graphs/nationality_hist.html%}</div>
-<div align="center"> {%include plotly_graphs/occupation_hist.html%}</div>
-<div align="center"> {%include plotly_graphs/religion_hist.html%}</div>
-<div align="center"> {%include plotly_graphs/ethnic_group_hist.html%}</div>
 
-<div align="center"> {%include plotly_graphs/visualize_topics.html%}</div>
-<div align="center"> {%include plotly_graphs/visualize_hierarchy.html%}</div>
 
 
