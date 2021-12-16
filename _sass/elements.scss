@@ -72,6 +72,14 @@
       }
     }
 }
+
+.bottom-nav {
+    margin-top: 3rem;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 3rem;
+}
+
 .title .btn {
     margin: 10px;
     @include font-rem(16);
