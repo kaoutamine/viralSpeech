@@ -6,9 +6,9 @@ comments: false
 ---
 
 
-The goal of this project is to predict which factor that caractherize a quote contributes for make it viral. For this purpose we use the Quotebank dataset complemented with the informations collected from Wikidata. Quotebank consist of a dataset of 178 million unique quotations, extracted from 196 million Engish news papers pubished between Agoust 2008 and April 2020. Wikidata is a databese containing information about a subjects being in Wikimedia. Therefore we will use it to gather the charactheristics about the speaker of each of the quotes.
+The goal of this project is to predict which factor that characterize a quote contributes for make it viral. For this purpose we use the Quotebank dataset complemented with the informations collected from Wikidata. Quotebank consist of a dataset of 178 million unique quotations, extracted from 196 million Engish news papers pubished between Agoust 2008 and April 2020. Wikidata is a databese containing information about a subjects being in Wikimedia. Therefore we will use it to gather the charactheristics about the speaker of each of the quotes.
 
-<!--img src="../assets/img/plots_data/raw_data.png"-->
+<img src="../assets/img/plots_data/raw_data.png">
 
 ## What makes a quote to be viral
 
