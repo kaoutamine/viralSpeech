@@ -20,15 +20,19 @@ Before diving into the question we will start by exploring the data extracted fr
 
 After difining the notion of virality, we are interested into finding the relevant features that may have an impact on the virality of the quote. Initially. we explored the distribution of the speaker’s features weighted by the nuber of occurences for each quote.
 
+<div align="center"> {%include plotly_graphs/age_hist.html%}</div>
 
 By observing the datage distributions we can see that more than half of the speakre in our dataset have an age that ranges between 19 and 66. This is expected since the speakers benefitting from media coverage are mainly young adults and middle-aged men.
 
+<!--div align="center"> {%include plotly_graphs/gender_hist.html%}</div-->
 
 By inspecting the gender for the speakers of all the quotes we observe that the majority of speakers are male or female, and that only a small minority of the quotes are represented by other genders. From the distribution of the occurence of quotes based on genders we can see that males are quoted more often by the media and their quotes are repeated more times than females.
 
+<!--div align="center"> {%include plotly_graphs/occupation_hist.html%}</div-->
 
 The third feature that we investigate for characterizing the spekear of a quote is its occupation. From the result of all quotes we can see that the three main profession are politicians, sport related professions and artistic profession( (actors, writers, singers, journalists etc…) business-related professions (businesspeople, lawyers, …). Since the dataset is made from newspapers articles, it makes a lot of sense that politicians would be the most quoted. Sport plays a very important role in our sociaty, and almost aevery newspaper has a sport section, thus it make sense that it represent a main profession in the quote dataset. For similar reason to sport, it is expected that also artistic and business-related profession would rank high in list of professions with most media coverage. Moreover, it should be noted that often politicians are not only assigned a single occupation, with many also being or having been lawyers, businesspeople, actors. This is clearly visible from the co-occurency matrix of the occupations. It is interesting to note that researcher rank as the second most cited occupation when considering only the number of different people contained in the dataset, but don’t even rank in the first 15 when weighting by the number of quotes and number of occurrences. This suggests that several researchers may be interviewed and quoted on a particular subject, but each of their opinions would not be repeated very often, nor there would be a significant number of researchers which are asked for their opinion particularly often compared to the other professions.
 
+<!--div align="center"> {%include plotly_graphs/nationality_hist.html%}</div-->
 
 The last feature that we consider for the speakers is their nationality. As we can see from these results, there is a big over-representation of people from english-speaking countries in the Quotebank dataset. This is not very surprising, as the dataset is built from newspaper articles written in English. We dicided to discard other features like ethnicity and religion, since for more than 90% of speakers in the whole dataset these information was not present.
 
