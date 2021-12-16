@@ -1,0 +1,71 @@
+{%if page.title == "Introduction"%}
+<a class="btn zoombtn" href="{{site.url}}">
+    <i class="fa fa-home"></i>
+</a>
+<a class="btn zoombtn" href="{{site.url}}/data/">
+    <i class="fa fa-chevron-right"></i>
+</a>
+{% endif %}
+
+{%if page.title == "Data"%}
+<a class="btn zoombtn" href="{{site.url}}/introduction/">
+    <i class="fa fa-chevron-left"></i>
+</a>
+<a class="btn zoombtn" href="{{site.url}}">
+    <i class="fa fa-home"></i>
+</a>
+<a class="btn zoombtn" href="{{site.url}}/feature_extraction/">
+    <i class="fa fa-chevron-right"></i>
+</a>
+{% endif %}
+
+{%if page.title == "Feature Extraction"%}
+<a class="btn zoombtn" href="{{site.url}}/data/">
+    <i class="fa fa-chevron-left"></i>
+</a>
+<a class="btn zoombtn" href="{{site.url}}">
+    <i class="fa fa-home"></i>
+</a>
+<a class="btn zoombtn" href="{{site.url}}/predict_virality/">
+    <i class="fa fa-chevron-right"></i>
+</a>
+{% endif %}
+
+{%if page.title == "Predict Virality"%}
+<a class="btn zoombtn" href="{{site.url}}/feature_extraction/">
+    <i class="fa fa-chevron-left"></i>
+</a>
+<a class="btn zoombtn" href="{{site.url}}">
+    <i class="fa fa-home"></i>
+</a>
+<a class="btn zoombtn" href="{{site.url}}/improvements/">
+    <i class="fa fa-chevron-right"></i>
+</a>
+{% endif %}
+
+{%if page.title == "Improvements"%}
+<a class="btn zoombtn" href="{{site.url}}/predict_virality/">
+    <i class="fa fa-chevron-left"></i>
+</a>
+<a class="btn zoombtn" href="{{site.url}}">
+    <i class="fa fa-home"></i>
+</a>
+<a class="btn zoombtn" href="{{site.url}}/summary/">
+    <i class="fa fa-chevron-right"></i>
+</a>
+{% endif %}
+
+{%if page.title == "Summary"%}
+<a class="btn zoombtn" href="{{site.url}}/improvements/">
+    <i class="fa fa-chevron-left"></i>
+</a>
+<a class="btn zoombtn" href="{{site.url}}">
+    <i class="fa fa-home"></i>
+</a>
+{% endif %}
+
+{%if page.title == "About us"%}
+<a class="btn zoombtn" href="{{site.url}}">
+    <i class="fa fa-home"></i>
+</a>
+{% endif %}
