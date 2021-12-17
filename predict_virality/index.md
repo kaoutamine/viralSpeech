@@ -44,7 +44,7 @@ The $$R^2$$ scores obtained over 10-Folds cross-validation with linear regressio
 
 
 | $$R^2$$ scores | Mean | Min | Max |
-|---------------:|:----:|:---:|:---:|
+|----------------|:----:|:---:|----:|
 |       Training |      |     |     |
 |     Validation |      |     |     |
 
