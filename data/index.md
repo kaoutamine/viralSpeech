@@ -8,9 +8,11 @@ When working on a data science project, it is always important to thorougly visu
 
 
 ## Extract data from the datasets
-This little diagram illustrates how we have used the two Datasets described in the [Introduction](/introduction/) to extract the informations which we expected to be useful for our task.
+These little diagrams illustrate how we have used the two Datasets described in the [Introduction](/introduction/) to extract the informations which we expected to be useful for our task.
 
 <img src="../assets/img/plots_data/raw_data.svg">
+
+<img src="../assets/img/plots_data/feature_from_quote.svg">
 
 
 ## What is a viral quote?
@@ -24,33 +26,181 @@ To do so, let's look at how the number or occurrences (which is the number of ti
 |------------|-----|-------|-------|-------|-------|-------|-------|-------|-------|--------|
 | **Value**  | 1   | 1     | 1     | 2     | 10    | 17    | 55    | 90    | 215   | 282552 |
 
-As you may already have noticed, more than half (63.3% to be precise) of quotes only appear in newspapers a single time!
+As you may already have noticed, more than half (63.3% to be precise) of quotes only appear in newspapers a single time! 79.2% of them appear strictly less than 3 times, and the number of quotes which are repeated more and more times decreases further and further, following what looks like a power law.
+
+These observations justify why we may want to distinguish between quotes that have been cited multiple times, or more generally more than a certain number of times, and those that haven't. For the rest of the data story, we define viral quotes as those having been cited more than 100 times. Such quotes make up only 0.4% of our data.
 
 
-#### defining precisely the mathematical ground for the question
-We have been throwing around the adjective "viral" for quotes. Because we are at our essence mathematicians, let's give it a strict mathematical definition : a quote is viral if it has occured more than a 100 times. This value of 100 is not chosen at random, indeed only 0.5% of all quotes occur more than 100 times which we think is a nice metric to define popularity.
+## Who is speaking in our data?
+
+Let's dive into the distributions of speaker informations across quotes in our dataset. Keep in mind that, in the following plots, each occurrence of each quote is counted as one measure (so a quote which was repeated many times will have a larger weight).
 
 
-## Finally show us results!!!
-
-Now that we have taken care of merging the datasets and defining the maths, let's take a look at what our dataset is telling us!
+### How old are they?
 
 <div align="center"> {%include plotly_graphs/age_hist.html%}</div>
 
-Half our speakers are between 19 and 66 years old. Again we see why it's important to take a look about the data and think : some speakers are literally two thousand years old, because some of the quotes come from long dead people! It then falls to us to decide if we want to keep them for training or not, if it makes sense to consider long dead people in our popularity features. 
+Half of quotations in newspapers articles are from speakers aged between 19 and 66 years, which corresponds to what we would expect.
+
+Let us, however, illustrate the importance of visualizing and analyzing the data before diving into any further analyses with an exemple: this dataset contains quotes from people more than 2000 years old (which have not been shown in the plot above). How is that possible? Very simply, the person being quoted is long dead and the quote is a proverb or a piece of a well-known literary work.
+
+For the purposes of our analyses, we have no interest in keeping such quotes, and decided therefore to simply drop them.
+
+
+
+### What gender?
 
 <div align="center"> {%include plotly_graphs/gender_hist.html%}</div>
 
-From this we see another immediate bias that our models could be victims of : As always, middle aged males are an over represented class of people, we have to be careful and maybe discard them from the features because what our models would probably learn from this is that to be successfully quoted you have to be aged and a male! That's not a conclusion that makes sense...
+76% of quotations in newspapers articles are from male speakers, followed by 23.9% quotations from female speakers and the remaining 0.1% from from people recognizing themselves as another gender. It is important to note this bias in our data at this stage as it may have an impact on later results. 
+
+
+
+### What do they do for a living?
 
 <div align="center"> {%include plotly_graphs/occupation_hist.html%}</div>
+
+As we may expect, the majority of quotations in newspapers articles are attributed to politicians, artists, sportspeople, ... 
+
+
+
+
+
+<br><br><br><br><br><br><br><br>
+
+
+
 
 Politicians, sports coaches and players, artists, researchers, writers, singers... We observe the usual distribution of jobs in newspapers quotes. 
 Some interesting things that might not be so obvious : Politicians oftentimes have a second occupation associated (lawyers, actors, business people). Also, while there are many quotes about research papers they come from different people, basically, researchers appear once each when their research is out and then don't appear again. These kind of things are good to note because it could help us debug and explain certain things about how our model takes decisions.
 
+### Where do they come from?
+
 <div align="center"> {%include plotly_graphs/nationality_hist.html%}</div>
 
-The last feature that we consider for the speakers is their nationality. As we can see from these results, there is a big over-representation of people from english-speaking countries in the Quotebank dataset. This is not very surprising, as the dataset is built from newspaper articles written in English. We dicided to discard other features like ethnicity and religion, since for more than 90% of speakers in the whole dataset these information was not present. Again we have to be careful and remind ourselves that our model will be trained specifically on english speaking countries and might not work as well if applied elsewhere!
+The last information about the speakers that we want to focus on is their nationality. We have a little suspect that people from English-speaking countries may be cited more often in the English-speaking newspapers making up the Quotebank dataset. Indeed, this is confirmed by the plot above, where an overwhelming majority of quotes have speakers from either the United States of America, the United Kingdom, Australia or Canada.
+
+
+
+## What is being said in our data?
+
+Let's also have a look at the lenght, topics and expressed sentiments across quotes in our dataset. Once again, keep in mind that, in the following plots, each occurrence of each quote is counted as one measure (so a quote which was repeated many times will have a larger weight).
+
+
+### How long are the quotes?
+
+|                      | min | 10% | 25% | 50% | 75% | 95% | max |
+|----------------------|-----|-----|-----|-----|-----|-----|-----|
+| Quote length (words) | 1   | 7   | 11  | 19  | 31  | 58  | 483 |
+
+
+Quote lengths in terms of number of words follow a heavy-tailed distribution, but 50% of quotes have lengths between 11 and 31 words, with the median placed at 19. Nonetheless, there are quotes which go up to almost 500 words, and others which are a single word (often simple exclamations such as 'AHHHHHH!' or 'Wow!').
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Are the quotes expressing positive, negative or neutral opinions?
+
+Sentiment analysis aims at identifying, given a particular sentence, if the opinion expressed in said sentence is rather positive, negative or neutral.
+
+This problem has long been studied in the context of the English language (even though much less so for other languages), which from our perspective it means that powerful tools to extract the sentiment from a sentence are readily available. One such tools is [vaderSentiment](https://github.com/cjhutto/vaderSentiment), which we will use for our analyses.
+
+We will group our quotes into three categories: those expressing positive sentiments, those expressing negative ones and the neutral quotes. Here is the distribution of these categories across our data:
+
+
+
+
+
+
+As we can see, .............................................. appear to be more common, followed by ............................. (if I may, what a sad world we live in if to be quoted you need to throw hate all over the place)
+
+
+
+
+
+
+
+
+
+### What arguments are they even talking about? 
+
+In a similar fashion to sentiment analysis, topic detection is another discipline that in recent years has seen considerable advances. In the context of this work, we will use [BERTopic](https://github.com/MaartenGr/BERTopic) to extract from our corpus of quotes the most frequently occurring topics and the topics of newly observed quotes.
+
+Illustrations of the topics we extracted from our data can be seen underneath. Please feel free to travel with your cursor on the different clusters and determine which topic is represented by each cluster. 
+
+<div align="center"> {%include plotly_graphs/visualize_topics.html%}</div>
+
+
+
+
+
+
+
+As 
+
+
+
+
+
+
+
+
+
+
+
+As we can see, the most common topics are .............................................. appear to be more common, followed by ............................. (if I may, what a sad world we live in if to be quoted you need to throw hate all over the place)
+
+
+
+
+
+
+
+
+
+## What we wanted from BertTopic and what we expected  :
+To explain briefly without going into mathematical details, BertTopic allows us to group tweets into dense clusters defined around subjects. There are also very interesting visualisation tools packaged with the modelling technique. In our case, we expected the tool to give us clusters based on popular subjects in english newspapers (Trump, american football…), which would allow us to define more clearly what is popular and what isn’t in this kind of press.
+
+## The results of bertTopic : 
+=> show the topic split and comment on the fact that it just shows the basic distribution of newspaper stories (politics then sports with specifically american football then research breakthroughs etc)
+
+<div align="center"> {%include plotly_graphs/visualize_topics.html%}</div>
+
+
+| Topic | Representative words                                                                                    |
+|-------|---------------------------------------------------------------------------------------------------------|
+| 0     | her, she, herself, hillary, clinton, lady, kim, sarah, actress, daughter                                |
+| 1     | students, education, schools, teachers, classroom, teaching, educational, colleges, tuition, curriculum |
+| 2     | defense, offense, plays, defensively, defensive, field, quarterback, players, turnovers, season         |
+| 3     | music, songs, band, sing, singing, musicians, concert, albums, musician, singer                         |
+| 4     | cricket, pitches, wickets, innings, wicket, batting, bowled, hitter, hitters, batsman                   |
+| 5     | fight, boxing, fighter, fights, ufc, conor, fighters, heavyweight, boxer, punches                       |
+| 6     | food, restaurant, restaurants, meal, meals, chef, foods, dishes, chefs, recipes                         |
+| 7     | insurance, healthcare, obamacare, medicaid, doctors, hospitals, medicare, nurses, insurers              |
+| 8     | league, liverpool, chelsea, arsenal, madrid, juventus, tottenham, everton, mourinho, napoli             |
+| 9     | racing, laps, qualifying, ferrari, nascar, f1, raced, tyres, prix, motorsport                           |
+| 10    | stock, investors, earnings, shareholders, markets, stocks, dividend, equity, shares, shareholder        |
+
+From the BerTopic model we have extracted the most relevant topics observed in the dataset. The most frequent topic contains female pronouns and names of the most relevant symbol of the female gender like Hillary Clinton. This is quite surprising since in the previous sections we have observed that female speakers are far less represented in the number of quotes with respect to male. One reason for why we may observe such a frequent topic may be due to the 2016 Unites States of America elections, which was certainly an event that was given huge media coverage, and one in which Donald Trump did not refrain from using Hilary Clinton's name in multiple occasions. The second most frequent topic can be labeled as education. This result can be expected since it also is a common discussion topic in politics. Other topics that appears to be also relevant in the newspaper are related to sports like American football, baseball, fighting sports, football, and racing. This result too can be explained with the information obtained in the previous sections, since we have observed that males of USA nationality that plays American football and males of UK nationality playing football represent a big portion of the total quotes.
+
+<div align="center"> {%include plotly_graphs/visualize_hierarchy.html%}</div>
+
+
+
+
+
+
+
+
 
 As a last sanity check, instead of studying data piece by piece, we tried pairing them in what is called co-occurences matrixes. This allows us to be on the lookout for weird relations between data and think 2D instead of simply 1D : 
 The male/female distribution over nations remains the same. We also notice that occupations are not quoted in the same proportions everywhere. American football players are more quoted in the American press, whilsts soccer players are more quoted in the UK press. In Russia and India there are close to no quotes on either. There are similar differences in occupations like actors, researchers etc... Another cool example is germany, where they seem much more inclined to quote researchers and research papers. 
