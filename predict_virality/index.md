@@ -44,7 +44,7 @@ The $$R^2$$ scores obtained over 10-Folds cross-validation with linear regressio
 
 
 | $$R^2$$ scores | Mean | Min | Max |
-|---------------:|:----:|:---:|:---:|
+|----------------|:----:|:---:|----:|
 |       Training |      |     |     |
 |     Validation |      |     |     |
 
@@ -69,7 +69,8 @@ How does our story end? The carpenter, in an attempt to repair the wall, not onl
 
 Indeed, we tried to use a Decision Tree to perform this regression task and despite our best efforts to avoid it underfitting or overfitting the training data, we obtained very negative validation $$R^2$$ scores back, which translates to significantly worse performance than our linear regressor.
 
-
+# Illustrating our efforts...
+<img src="../assets/img/meme.png">
 ## Predicting if a quote will be viral
 
 Attempts done at predicting the binary label: "is the quote going to be repeated more than ??? times" have also failed in a similar fashion, with a linear model not performing much better than random guessing, and the decision tree performing even worse.
