@@ -14,17 +14,17 @@ For the readers which are not particularly familiar with machine learning, here 
 As [Wikipedia](https://en.wikipedia.org/wiki/Machine_learning) states it, machine learning is the study of computer algorithms that can improve automatically through experience and by the use of data.
 
 #### Supervised learning
-In this project, we will only use supervised learning: we give the machine learning models pairs of features and the corresponding desired outcomes, the models learn on their own some parameters, and then use those parameters to predict new outcomes from new features.
+In this project, we will only use supervised learning. Supervised learning principle is to train the machine learning models by giving it as input the features and its corresponding desired outcomes. The models will then learn on their own some parameters, and once it is fully trained it can be used to predict new outcomes from new given features.
 
 #### Features? Outcomes?
-Features are, as we presented in the previous Section, some information that we can extract from our data. In our case it will be information about the speaker's age, occupation, nationality, gender, about the quote's length and topic and more.
+Features are, as we presented in the previous <a href="{{site.url}}/data/"><b>section</b></a>, some information that we can extract from our data. In our case it will be information about the speaker's age, occupation, nationality, gender, about the quote's length and topic and more.
 
 Outcomes are what we want the model to predict from those features. In our case it will be a binary label (the quote is viral / the quote is not viral) or a number (the number of times we expect this quote to have been repeated).
 
 ### The Deadly Sin in Machine Learning
-In machine learning, we are constantly faced with the problems of underfitting (the model's learning is incomplete) and overfitting (the model is learning something we do not want it to learn). You can read more about these issues [here](https://en.wikipedia.org/wiki/Overfitting). 
+In machine learning, we are constantly faced with the problems of underfitting (the model is too simple to model our dataset) and overfitting (the model is learning the noise which is in our dataset). You can read more about these issues [here](https://en.wikipedia.org/wiki/Overfitting). 
 
-Both these situations are bad, and to avoid incurring into one of them without realizing, it is very important (and a deadly sin if you do not do it) to separate the data early into a training and a test set. This separation will allow to test if your model perfoms as well on completely unseen data as it does on the training data, or if it overfits/underfits the training data.
+Both of these situations are bad, and to avoid incurring into one of them without realizing it, it is very important (and a deadly sin if you do not do it) to separate the data early into a training and a test set. This separation will allow to test if your model perfoms as well on completely unseen data as it does on the training data, or if it overfits/underfits the training data.
 
 All this to say: we removed 30% of our available data and kept it aside with the aim of using it in the end to estimate if the models overfit or underfit. As our distribution of the number of occurrences is very skewed, we took special care in splitting the data such that the same proportion of very likely and very unlikely outcomes are present in the two splits.
 
@@ -55,7 +55,7 @@ As you may have noticed, our linear regressor is not much better than a model wh
 #### So what can we conclude?
 Unfortunately, nothing about what makes a quote be more likely to be repeated. Desite some results may be squeezed out of P-values and metrics for this model, it explains way too little of the variance in the data to justify our claims. 
 
-Let me give you an exemple: imagine we claimed that our model shows being an actor (just an exemple!) makes you more likely to get quoted. Now imagine another researcher comes along and adds to our features a new magical one: is the speaker born in January? He trains again the model, and gets an $$R^2$$ very close to 1, with a negative impact of being an actor on the number of times you are quoted.
+Let me give you an example: imagine we claimed that our model shows being an actor (just an example!) makes you more likely to get quoted. Now imagine another researcher comes along and adds to our features a new magical one: is the speaker born in January? He trains again the model, and gets an $$R^2$$ very close to 1, with a negative impact of being an actor on the number of times you are quoted.
 His model would explain much better what is happening in the data, and as such he would prove our claim wrong. All because we trusted a model which was trying its best, fighting tooth and nail to explain what was going on in the dataset with what we gave him and what it could do. Except, we did not give him the right tools, so he made a mistake.
 
 #### Let's try more complex models
@@ -82,7 +82,7 @@ Attempts done at predicting the binary label: "is the quote going to be repeated
 
 Our results show a sad reality of machine learning and data analysis. Sometimes, it is just not possible to predict something with what you have. In our case, all these features which we extracted, despite having reasons to believe that they would individually all explain some difference in quotability, do not in fact appear to do so.
 
-It may be that we chose features which are not useful by themselves, or that there is simply too much noise in this data, in the form of external phenomenons not tracked by this data such as trends, real-life events, ... which would need to be accounted for to obtain meaningful results.
+It may be that we chose features which are not useful by themselves, or that there is simply too much noise in the data, in the form of external phenomenons not tracked by the data such as trends, real-life events, ... which would need to be accounted for to obtain meaningful results.
 
 The first issue can be solved by trying out even more complex models (deep learning models) capable of extracting more features from the initial ones all by themselves, and then use these new features to predict the outcome. We did not explore these models here because we were interested in interpreting the results obtained, which is an horribly hard task with such complex models. 
 
