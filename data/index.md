@@ -126,9 +126,6 @@ Here's a quick snapshot of the top topics from our dataset :
 
 <div align="center"> {%include plotly_graphs/visualize_topics.html%}</div>
 
-
-
-
 | Topic | Representative words                                                                                    |
 |-------|---------------------------------------------------------------------------------------------------------|
 | 0     | her, she, herself, hillary, clinton, lady, kim, sarah, actress, daughter                                |
