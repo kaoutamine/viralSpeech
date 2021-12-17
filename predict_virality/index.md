@@ -42,12 +42,10 @@ Linear regression finds a linear relationship between the features and the desir
 
 The $$R^2$$ scores obtained over 10-Folds cross-validation with linear regression are summarized in this table:
 
-table {
-    width:70%;
-}
+
 
 | $$R^2$$ scores | Mean | Min | Max |
-|----------------|:----:|:---:|----:|
+|---------------:|:----:|:---:|:---:|
 |       Training |      |     |     |
 |     Validation |      |     |     |
 
