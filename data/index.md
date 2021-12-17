@@ -110,15 +110,12 @@ As we can see, positive sentiments are preponderant in our data, which is, in ou
 
 
 
-### What arguments are they even talking about? 
+### What topics are they  talking about? 
 
 In a similar fashion to sentiment analysis, topic detection is another discipline that in recent years has seen considerable advances. In the context of this work, we will use [BERTopic](https://github.com/MaartenGr/BERTopic) to extract from our corpus of quotes the most frequently occurring topics and the topics of newly observed quotes.
 
 
-## What we wanted from BertTopic and what we expected  :
-To explain briefly without going into mathematical details, BertTopic allows us to group tweets into dense clusters defined around subjects. There are also very interesting visualisation tools packaged with the model. In our case, we expected the tool to give us clusters based on popular subjects in english newspapers (Politics, Trump, american football…), which would allow us to define more clearly what is popular and what isn’t in this kind of press. We also want to see if there are any unexpected topics that pop up in top popularity.
 
-## And here's what the results look like! 
 Illustrations of the topics we extracted from our data can be seen underneath. Please feel free to travel with your cursor on the different clusters and determine which topic is represented by each cluster. 
 
 <div align="center"> {%include plotly_graphs/visualize_topics.html%}</div>
@@ -146,7 +143,7 @@ Here's a quick snapshot of the top topics from our dataset :
 | 9     | racing, laps, qualifying, ferrari, nascar, f1, raced, tyres, prix, motorsport                           |
 | 10    | stock, investors, earnings, shareholders, markets, stocks, dividend, equity, shares, shareholder        |
 
-## A quick topic analysis to let you get a feel of how we reason from this data
+### What we learn from the topics :
 From the BerTopic model we have extracted the most relevant topics observed in the dataset. The most frequent topic contains female pronouns and names of the most relevant symbol of the female gender like Hillary Clinton. This is quite surprising since in the previous sections we have observed that female speakers are far less represented in the number of quotes with respect to male. One reason for why we may observe such a frequent topic may be due to the 2016 United States of America elections, which was certainly an event that was given huge media coverage, and one in which Donald Trump did not refrain from using Hilary Clinton's name in multiple occasions. The second most frequent topic can be labeled as education. This result can be expected since it also is a common discussion topic in politics. Other topics that appears to be also relevant in the newspaper are related to sports like American football, baseball, fighting sports, football, and racing. This result too can be explained with the information obtained in the previous sections, since we have observed that males of USA nationality that plays American football and males of UK nationality playing football represent a big portion of the total quotes.
 
 If you want to see more analysis and conclusions from bertTopic, as well as more detailed mathematical explanations, don't hesitate to look at the github sourcecode!
