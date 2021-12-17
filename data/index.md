@@ -10,9 +10,7 @@ When working on a data science project, it is always important to thorougly visu
 ## Extract data from the datasets
 These little diagrams illustrate how we have used the two Datasets described in the [Introduction](/introduction/) to extract the informations which we expected to be useful for our task.
 
-<img src="../assets/img/plots_data/raw_data.svg">
-
-<img src="../assets/img/plots_data/feature_from_quote.svg">
+<img src="../assets/img/plots_data/diagram_v10.svg">
 
 
 ## What is a viral quote?
