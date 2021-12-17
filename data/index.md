@@ -25,7 +25,7 @@ To do so, let's look at how the number or occurrences (which is the number of ti
 |------------|-----|-------|-------|-------|-------|-------|-------|-------|-------|--------|
 | **Value**  | 1   | 1     | 1     | 2     | 10    | 17    | 55    | 90    | 215   | 282552 |
 
-As you may already have noticed, more than half (63.3% to be precise) of quotes only appear in newspapers a single time! 79.2% of them appear strictly less than 3 times, and the number of quotes which are repeated more and more times decreases further and further, following what looks like a <a href="https://en.wikipedia.org/wiki/Power_law%22%3E<b>power law</b></a>. 
+As you may already have noticed, more than half (63.3% to be precise) of quotes only appear in newspapers a single time! 79.2% of them appear strictly less than 3 times, and the number of quotes which are repeated more and more times decreases further and further, following what looks like a <a href="https://en.wikipedia.org/wiki/Power_law"><b>power law</b></a>. 
 
 These observations justify why we may want to distinguish between quotes that have been cited multiple times, or more generally more than a certain number of times, and those that haven't. For the rest of the data story, we define viral quotes as those having been cited more than 100 times. Such quotes make up only 0.4% of our data.
 
