@@ -41,7 +41,7 @@ Let's dive into the distributions of speaker informations across quotes in our d
 
 Half of quotations in newspapers articles are from speakers aged between 19 and 66 years, which corresponds to what we would expect.
 
-Let us, however, illustrate the importance of visualizing and analyzing the data before diving into any further analyses with an exemple: this dataset contains quotes from people more than 2000 years old (which have not been shown in the plot above). How is that possible? Very simply, the person being quoted is long dead and the quote is a proverb or a piece of a well-known literary work.
+Let us, however, illustrate the importance of visualizing and analyzing the data before diving into any further analyses with an example: this dataset contains quotes from people more than 2000 years old (which have not been shown in the plot above). How is that possible? Very simply, the person being quoted is long dead and the quote is a proverb or a piece of a well-known literary work.
 
 For the purposes of our analyses, we have no interest in keeping such quotes, and decided therefore to simply drop them.
 
@@ -124,7 +124,6 @@ Illustrations of the topics we extracted from our data can be seen underneath. P
 ## The results of bertTopic : 
 Here's a quick snapshot of the top topics from our dataset :
 
-<div align="center"> {%include plotly_graphs/visualize_topics.html%}</div>
 
 | Topic | Representative words                                                                                    |
 |-------|---------------------------------------------------------------------------------------------------------|
