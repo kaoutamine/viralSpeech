@@ -4,15 +4,28 @@ title: Data
 date: 08-12-2021
 comments: false
 ---
-When working on a data science project, it is always important to thorougly understand our data and identify what can go wrong. After all, training machine learning models have the same bad tendency as humans to bias their learning. Indeed, lacks of balance and errors in representation of the data can make models learn the wrong way. Thus even in very advanced projects we always proceed to a ground analysis of data with the most basic tools possible.
+When working on a data science project, it is always important to thorougly visualize, explore and understand what is going on in the data. 
 
-The goal of this project is to predict which factor that characterize a quote contributes for make it viral. For this purpose we use the <a href="https://zenodo.org/record/4277311"><b>Quotebank</b></a> dataset, complemented with the informations collected from <a href="https://www.wikidata.org/wiki/Wikidata:Main_Page"><b>Wikidata</b></a>. Quotebank consist of a dataset of 178 million unique quotations, extracted from 196 million Engish news papers published between Agoust 2008 and April 2020. Each of these quotations comes packed with a list of people that could have been at the origin of this quote. This was made possible by a very advanced neural network designed at EPFL in collaboration with Stanford. We then use Wikidata to extract extra informations about the people that spoke each quote.
+
+## Extract data from the datasets
+This little diagram illustrates how we have used the two Datasets described in the [Introduction](/introduction/) to extract the informations which we expected to be useful for our task.
 
 <img src="../assets/img/plots_data/raw_data.svg">
 
-## Reminder of the question we would like to answer : What makes a quote viral
+
+## What is a viral quote?
+We have, up until this point, used the adjective 'viral' for a quote, without ever defining it or explain why such a distinction can be made between quotes.
+
+To do so, let's look at how the number or occurrences (which is the number of times a particular quote was found in different newspaper articles) is distributed across all quotes in the Quotebank dataset:
 
 <img src="../assets/img/plots_data/occ_hist.svg">
+
+| Percentile | Min | 25.0% | 50.0% | 75.0% | 95.0% | 97.0% | 99.0% | 99.5% | 99.9% | Max    |
+|------------|-----|-------|-------|-------|-------|-------|-------|-------|-------|--------|
+| **Value**  | 1   | 1     | 1     | 2     | 10    | 17    | 55    | 90    | 215   | 282552 |
+
+As you may already have noticed, more than half (63.3% to be precise) of quotes only appear in newspapers a single time!
+
 
 #### defining precisely the mathematical ground for the question
 We have been throwing around the adjective "viral" for quotes. Because we are at our essence mathematicians, let's give it a strict mathematical definition : a quote is viral if it has occured more than a 100 times. This value of 100 is not chosen at random, indeed only 0.5% of all quotes occur more than 100 times which we think is a nice metric to define popularity.
