@@ -42,16 +42,14 @@ Linear regression finds a linear relationship between the features and the desir
 
 The $$R^2$$ scores obtained over 10-Folds cross-validation with linear regression are summarized in this table:
 
-
-| $$R^2$$ scores | Mean | Min | Max |
-|----------------|:----:|:---:|----:|
-|       Training |      |     |     |
-|     Validation |      |     |     |
-
+|                | Mean    | Min     | Max     |
+|:--------------:|:-------:|:-------:|:-------:|
+| **Training**   | 0.00075 | 0.00068 | 0.00109 |
+| **Validation** | 0.00126 | 0.00016 | 0.00205 |
 
 All you need to know about $$R^2$$ scores is that they are always $$\leq 1$$, where 1 would mean the model perfectly predicts the outcome from the features every time, 0 means the model always predicts the mean, and can go as low as $$-\infty$$ for models which do even worse than that.
 
-As you may have noticed, our linear regressor is not much better than a model which simply predicts the mean. It is still nice to notice that the model is actually a little bit better than the baseline, as we have observed its maximum error never exceeds 180000 (which is, admittedly, a huge error) despite there being samples with outcomes as large as 240000.
+As you may have noticed, our linear regressor is not much better than a model which simply predicts the mean. It is still nice to notice that the model is actually a little bit better than the baseline, as we have observed its maximum error never exceeds 180000 (which is, admittedly, a huge error) despite there being samples with outcomes as large as 280000.
 
 #### So what can we conclude?
 Unfortunately, nothing about what makes a quote be more likely to be repeated. Desite some results may be squeezed out of P-values and metrics for this model, it explains way too little of the variance in the data to justify our claims. 
@@ -69,8 +67,11 @@ How does our story end? The carpenter, in an attempt to repair the wall, not onl
 
 Indeed, we tried to use a Decision Tree to perform this regression task and despite our best efforts to avoid it underfitting or overfitting the training data, we obtained very negative validation $$R^2$$ scores back, which translates to significantly worse performance than our linear regressor.
 
-# Illustrating our efforts...
-<img src="../assets/img/meme.png">
+#### Illustrating our efforts...
+<img src="../assets/img/meme.png" style="width:400px;"/>
+
+<div align="center">Thanks to <a href="https://www.monkeyuser.com/2019/new-model/">MonkeyUser</a> for allowing to reuse this image.</div>
+
 ## Predicting if a quote will be viral
 
 Attempts done at predicting the binary label: "is the quote going to be repeated more than ??? times" have also failed in a similar fashion, with a linear model not performing much better than random guessing, and the decision tree performing even worse.
