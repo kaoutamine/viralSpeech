@@ -60,14 +60,15 @@ For the purposes of our analyses, we have no interest in keeping such quotes, an
 
 <div align="center"> {%include plotly_graphs/occupation_hist.html%}</div>
 
-As we may expect, the majority of quotations in newspapers articles are attributed to politicians, artists, sportspeople, ... 
+As we may expect, the majority of quotations in newspapers articles are attributed to politicians, sports related professions, artistic professions, ...
 
+Let's look at 
 
+<img src="../assets/img/plots_data/occupations_co_occurrence.svg" style="background-color:white">
 
+One important thing that we can observe from these graph is that politicians, actors and influencers in general are well represented in this dataset, which is good for us as it is towards these people that our research is geared towards. Later in the notebook, we will use only a few of the most common occupations to train the model in order to avoid increasing the number of features too much and incurring the curse of dimentionality.
 
-
-<br><br><br><br><br><br><br><br>
-
+Another important thing to notice is that some professions are labelled in multiple ways, such as actors, film actors, television actors, ... and as we can see from the co-occurrency matrix, often all these labels are assigned to each person. As such we will probably want to manually merge them into a single one when generating the training data.
 
 
 
@@ -89,22 +90,16 @@ Let's also have a look at the lenght, topics and expressed sentiments across quo
 
 ### How long are the quotes?
 
-|                      | min | 10% | 25% | 50% | 75% | 95% | max |
-|----------------------|-----|-----|-----|-----|-----|-----|-----|
-| Quote length (words) | 1   | 7   | 11  | 19  | 31  | 58  | 483 |
+|                          | min | 10% | 25% | 50% | 75% | 95% | max |
+|--------------------------|-----|-----|-----|-----|-----|-----|-----|
+| **Quote length (words)** | 1   | 7   | 11  | 19  | 31  | 58  | 483 |
 
 
 Quote lengths in terms of number of words follow a heavy-tailed distribution, but 50% of quotes have lengths between 11 and 31 words, with the median placed at 19. Nonetheless, there are quotes which go up to almost 500 words, and others which are a single word (often simple exclamations such as 'AHHHHHH!' or 'Wow!').
 
+For the rest of the analysis we shall define quotes as long if they have at least 31 words and short if they have less than 11 words. This yields the following distribution:
 
-
-
-
-
-
-
-
-
+<div align="center"> {%include plotly_graphs/quote_lenght_hist.html%}</div>
 
 
 
@@ -116,18 +111,9 @@ This problem has long been studied in the context of the English language (even 
 
 We will group our quotes into three categories: those expressing positive sentiments, those expressing negative ones and the neutral quotes. Here is the distribution of these categories across our data:
 
+<div align="center"> {%include plotly_graphs/sentiment_hist.html%}</div>
 
-
-
-
-
-As we can see, .............................................. appear to be more common, followed by ............................. (if I may, what a sad world we live in if to be quoted you need to throw hate all over the place)
-
-
-
-
-
-
+As we can see, positive sentiments are preponderant in our data, which is, in our opinion, a surprise, but a welcomed one.
 
 
 

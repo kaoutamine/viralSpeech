@@ -47,6 +47,7 @@ The $$R^2$$ scores obtained over 10-Folds cross-validation with linear regressio
 | **Training**   | 0.00075 | 0.00068 | 0.00109 |
 | **Validation** | 0.00126 | 0.00016 | 0.00205 |
 
+
 All you need to know about $$R^2$$ scores is that they are always $$\leq 1$$, where 1 would mean the model perfectly predicts the outcome from the features every time, 0 means the model always predicts the mean, and can go as low as $$-\infty$$ for models which do even worse than that.
 
 As you may have noticed, our linear regressor is not much better than a model which simply predicts the mean. It is still nice to notice that the model is actually a little bit better than the baseline, as we have observed its maximum error never exceeds 180000 (which is, admittedly, a huge error) despite there being samples with outcomes as large as 280000.
