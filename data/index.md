@@ -9,7 +9,7 @@ do our job in our place, it is still very important to understand what we are fe
 
 
 ## Extract data from the datasets
-These little diagrams illustrate how we have used the two Datasets described in the [Introduction](/introduction/) to extract the informations which we expected to be useful for our task.
+These little diagrams illustrate how we have used the two Datasets described in the <a href="{{site.url}}/introduction/"><b>Introduction</b></a> to extract the informations which we expected to be useful for our task.
 
 <img src="../assets/img/plots_data/diagram_v10.svg">
 
@@ -25,7 +25,7 @@ To do so, let's look at how the number or occurrences (which is the number of ti
 |------------|-----|-------|-------|-------|-------|-------|-------|-------|-------|--------|
 | **Value**  | 1   | 1     | 1     | 2     | 10    | 17    | 55    | 90    | 215   | 282552 |
 
-As you may already have noticed, more than half (63.3% to be precise) of quotes only appear in newspapers a single time! 79.2% of them appear strictly less than 3 times, and the number of quotes which are repeated more and more times decreases further and further, following what looks like a power law.
+As you may already have noticed, more than half (63.3% to be precise) of quotes only appear in newspapers a single time! 79.2% of them appear strictly less than 3 times, and the number of quotes which are repeated more and more times decreases further and further, following what looks like a <a href="https://en.wikipedia.org/wiki/Power_law%22%3E<b>power law</b></a>. 
 
 These observations justify why we may want to distinguish between quotes that have been cited multiple times, or more generally more than a certain number of times, and those that haven't. For the rest of the data story, we define viral quotes as those having been cited more than 100 times. Such quotes make up only 0.4% of our data.
 
@@ -114,45 +114,22 @@ As we can see, positive sentiments are preponderant in our data, which is, in ou
 
 In a similar fashion to sentiment analysis, topic detection is another discipline that in recent years has seen considerable advances. In the context of this work, we will use [BERTopic](https://github.com/MaartenGr/BERTopic) to extract from our corpus of quotes the most frequently occurring topics and the topics of newly observed quotes.
 
+
+## What we wanted from BertTopic and what we expected  :
+To explain briefly without going into mathematical details, BertTopic allows us to group tweets into dense clusters defined around subjects. There are also very interesting visualisation tools packaged with the model. In our case, we expected the tool to give us clusters based on popular subjects in english newspapers (Politics, Trump, american football…), which would allow us to define more clearly what is popular and what isn’t in this kind of press. We also want to see if there are any unexpected topics that pop up in top popularity.
+
+## And here's what the results look like! 
 Illustrations of the topics we extracted from our data can be seen underneath. Please feel free to travel with your cursor on the different clusters and determine which topic is represented by each cluster. 
 
 <div align="center"> {%include plotly_graphs/visualize_topics.html%}</div>
 
 
-
-
-
-
-
-As 
-
-
-
-
-
-
-
-
-
-
-
-As we can see, the most common topics are .............................................. appear to be more common, followed by ............................. (if I may, what a sad world we live in if to be quoted you need to throw hate all over the place)
-
-
-
-
-
-
-
-
-
-## What we wanted from BertTopic and what we expected  :
-To explain briefly without going into mathematical details, BertTopic allows us to group tweets into dense clusters defined around subjects. There are also very interesting visualisation tools packaged with the model. In our case, we expected the tool to give us clusters based on popular subjects in english newspapers (Politics, Trump, american football…), which would allow us to define more clearly what is popular and what isn’t in this kind of press. We also want to see if there are any unexpected topics that pop up in top popularity.
-
 ## The results of bertTopic : 
 Here's a quick snapshot of the top topics from our dataset :
 
 <div align="center"> {%include plotly_graphs/visualize_topics.html%}</div>
+
+
 
 
 | Topic | Representative words                                                                                    |
@@ -169,9 +146,10 @@ Here's a quick snapshot of the top topics from our dataset :
 | 9     | racing, laps, qualifying, ferrari, nascar, f1, raced, tyres, prix, motorsport                           |
 | 10    | stock, investors, earnings, shareholders, markets, stocks, dividend, equity, shares, shareholder        |
 
+## A quick topic analysis to let you get a feel of how we reason from this data
 From the BerTopic model we have extracted the most relevant topics observed in the dataset. The most frequent topic contains female pronouns and names of the most relevant symbol of the female gender like Hillary Clinton. This is quite surprising since in the previous sections we have observed that female speakers are far less represented in the number of quotes with respect to male. One reason for why we may observe such a frequent topic may be due to the 2016 United States of America elections, which was certainly an event that was given huge media coverage, and one in which Donald Trump did not refrain from using Hilary Clinton's name in multiple occasions. The second most frequent topic can be labeled as education. This result can be expected since it also is a common discussion topic in politics. Other topics that appears to be also relevant in the newspaper are related to sports like American football, baseball, fighting sports, football, and racing. This result too can be explained with the information obtained in the previous sections, since we have observed that males of USA nationality that plays American football and males of UK nationality playing football represent a big portion of the total quotes.
 
-Again, if you want to see more analysis and conclusions from bertTopic, as well as more detailed mathematical explanations, don't hesitate to look at the github sourcecode!
+If you want to see more analysis and conclusions from bertTopic, as well as more detailed mathematical explanations, don't hesitate to look at the github sourcecode!
 
 
 <div align="center"> {%include plotly_graphs/visualize_hierarchy.html%}</div>
