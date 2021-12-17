@@ -124,20 +124,20 @@ Illustrations of the topics we extracted from our data can be seen underneath. P
 ## The results of bertTopic : 
 Here's a quick snapshot of the top topics from our dataset :
 
-
-| Topic | Representative words                                                                                    |
-|-------|---------------------------------------------------------------------------------------------------------|
-| 0     | her, she, herself, hillary, clinton, lady, kim, sarah, actress, daughter                                |
-| 1     | students, education, schools, teachers, classroom, teaching, educational, colleges, tuition, curriculum |
-| 2     | defense, offense, plays, defensively, defensive, field, quarterback, players, turnovers, season         |
-| 3     | music, songs, band, sing, singing, musicians, concert, albums, musician, singer                         |
-| 4     | cricket, pitches, wickets, innings, wicket, batting, bowled, hitter, hitters, batsman                   |
-| 5     | fight, boxing, fighter, fights, ufc, conor, fighters, heavyweight, boxer, punches                       |
-| 6     | food, restaurant, restaurants, meal, meals, chef, foods, dishes, chefs, recipes                         |
-| 7     | insurance, healthcare, obamacare, medicaid, doctors, hospitals, medicare, nurses, insurers              |
-| 8     | league, liverpool, chelsea, arsenal, madrid, juventus, tottenham, everton, mourinho, napoli             |
-| 9     | racing, laps, qualifying, ferrari, nascar, f1, raced, tyres, prix, motorsport                           |
-| 10    | stock, investors, earnings, shareholders, markets, stocks, dividend, equity, shares, shareholder        |
+| Topic | Representative words                                                                                    | freq(%) |
+|-------|---------------------------------------------------------------------------------------------------------|---------|
+|       | unclassified/unknown topics                                                                             | 54.9    |
+| 0     | her, she, herself, hillary, clinton, lady, kim, sarah, actress, daughter                                | 2.35    |
+| 1     | students, education, schools, teachers, classroom, teaching, educational, colleges, tuition, curriculum | 1.34    |
+| 2     | defense, offense, plays, defensively, defensive, field, quarterback, players, turnovers, season         | 1.31    |
+| 3     | music, songs, band, sing, singing, musicians, concert, albums, musician, singer                         | 1.28    |
+| 4     | cricket, pitches, wickets, innings, wicket, batting, bowled, hitter, hitters, batsman                   | 1.02    |
+| 5     | fight, boxing, fighter, fights, ufc, conor, fighters, heavyweight, boxer, punches                       | 0.63    |
+| 6     | food, restaurant, restaurants, meal, meals, chef, foods, dishes, chefs, recipes                         | 0.63    |
+| 7     | insurance, healthcare, obamacare, medicaid, doctors, hospitals, medicare, nurses, insurers              | 0.62    |
+| 8     | league, liverpool, chelsea, arsenal, madrid, juventus, tottenham, everton, mourinho, napoli             | 0.62    |
+| 9     | racing, laps, qualifying, ferrari, nascar, f1, raced, tyres, prix, motorsport                           | 0.60    |
+| 10    | stock, investors, earnings, shareholders, markets, stocks, dividend, equity, shares, shareholder        | 0.60    |
 
 ### What we learn from the topics :
 From the BerTopic model we have extracted the most relevant topics observed in the dataset. The most frequent topic contains female pronouns and names of the most relevant symbol of the female gender like Hillary Clinton. This is quite surprising since in the previous sections we have observed that female speakers are far less represented in the number of quotes with respect to male. One reason for why we may observe such a frequent topic may be due to the 2016 United States of America elections, which was certainly an event that was given huge media coverage, and one in which Donald Trump did not refrain from using Hilary Clinton's name in multiple occasions. The second most frequent topic can be labeled as education. This result can be expected since it also is a common discussion topic in politics. Other topics that appears to be also relevant in the newspaper are related to sports like American football, baseball, fighting sports, football, and racing. This result too can be explained with the information obtained in the previous sections, since we have observed that males of USA nationality that plays American football and males of UK nationality playing football represent a big portion of the total quotes.
