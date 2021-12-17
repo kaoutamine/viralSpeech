@@ -62,18 +62,12 @@ For the purposes of our analyses, we have no interest in keeping such quotes, an
 
 As we may expect, the majority of quotations in newspapers articles are attributed to politicians, sports related professions, artistic professions, ...
 
-Let's look at 
+Let's look at the co-occurrence of different occupations for a single speaker:
 
 <img src="../assets/img/plots_data/occupations_co_occurrence.svg" style="background-color:white">
 
-One important thing that we can observe from these graph is that politicians, actors and influencers in general are well represented in this dataset, which is good for us as it is towards these people that our research is geared towards. Later in the notebook, we will use only a few of the most common occupations to train the model in order to avoid increasing the number of features too much and incurring the curse of dimentionality.
+As we can see from this matrix, some professions are labelled in multiple ways, such as actors, film actors, television actors, ... in the latter stages of our analysis we will take care to merge these similar occupations into a single label. Additionally, some occupations such as politician and lawyers, actors or businesspeople tend to often be assigned to the same person, whereas some others, such as researcher, often are the only ones assigned to a single speaker.
 
-Another important thing to notice is that some professions are labelled in multiple ways, such as actors, film actors, television actors, ... and as we can see from the co-occurrency matrix, often all these labels are assigned to each person. As such we will probably want to manually merge them into a single one when generating the training data.
-
-
-
-Politicians, sports coaches and players, artists, researchers, writers, singers... We observe the usual distribution of jobs in newspapers quotes. 
-Some interesting things that might not be so obvious : Politicians oftentimes have a second occupation associated (lawyers, actors, business people). Also, while there are many quotes about research papers they come from different people, basically, researchers appear once each when their research is out and then don't appear again. These kind of things are good to note because it could help us debug and explain certain things about how our model takes decisions.
 
 ### Where do they come from?
 
