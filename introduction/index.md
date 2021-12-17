@@ -24,8 +24,7 @@ We were curious to see if it was possible to anticipate the quote virality from 
 This project involves multiple stages, each with their own choices and challenges, which we will present to you one-by-one in the following Sections.
 
 ## Why?
-Answering this research question would allow us to build guidelines on what speaker characteristics people react more to, what topics, what sentiment (aggressive or positive), what length and more.
-
+Answering this research question would allow us to build guidelines on what speaker characteristics people react more to, what topics, what sentiment (aggressive or positive), what length and more. And even if the models do not work as we expect them to, there is still a lot of intersting information to extract from failures, such is the essence of Computer Science!
 
 <br><br>
 **Have a nice reading.**
