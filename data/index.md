@@ -124,7 +124,7 @@ Illustrations of the topics we extracted from our data can be seen underneath. P
 #### The results of BERTopic : 
 Here's a quick snapshot of the top topics from our dataset :
 
-| Topic | Representative words                                                                                    | freq(%) |
+| Topic | Representative words                                                                                    | Frequency (%) |
 |-------|---------------------------------------------------------------------------------------------------------|---------|
 |       | unclassified/unknown topics                                                                             | 54.9    |
 | 0     | her, she, herself, hillary, clinton, lady, kim, sarah, actress, daughter                                | 2.35    |
@@ -148,10 +148,8 @@ If you want to see more analysis and conclusions from BERTopic, as well as more 
 <div align="center"> {%include plotly_graphs/visualize_hierarchy.html%}</div>
 
 
-As a last sanity check, instead of studying data piece by piece, we tried pairing them in what is called co-occurences matrixes. This allows us to be on the lookout for weird relations between data and think 2D instead of simply 1D : 
-The male/female distribution over nations remains the same. We also notice that occupations are not quoted in the same proportions everywhere. American football players are more quoted in the American press, whilsts soccer players are more quoted in the UK press. In Russia and India there are close to no quotes on either. There are similar differences in occupations like actors, researchers etc... Another cool example is germany, where they seem much more inclined to quote researchers and research papers. 
-Again, this reinforces the fact that our model will learn to think about popularity from an American based point of view, and might miss out on crucial factors if applied to other countries newspapers later on.
 
+## Final thoughts
 
 So even though we have used very basic tools, we can see how much information we extracted from the dataset and how much better we can understand if our model takes weird decisions and makes errors. Being a data scientist isn't only about being cool and using neural nets, it's also important to understand the base on which you build everything else! If you are interested in looking at more of our findings on data, don't hesitate to consult the comments in the source codes explaining more interesting relations and info extracted from our analysis. 
 
