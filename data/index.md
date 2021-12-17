@@ -4,7 +4,8 @@ title: Data
 date: 08-12-2021
 comments: false
 ---
-When working on a data science project, it is always important to thorougly visualize, explore and understand what is going on in the data. 
+When working on a data science project, it is always important to thorougly visualize, explore and understand what is going on in the data. Even though the ultimate goal is to make models
+do our job in our place, it is still very important to understand what we are feeding the model so that when problems arise we can link them to data.
 
 
 ## Extract data from the datasets
@@ -77,7 +78,7 @@ The last information about the speakers that we want to focus on is their nation
 
 ## What is being said in our data?
 
-Let's also have a look at the lenght, topics and expressed sentiments across quotes in our dataset. Once again, keep in mind that, in the following plots, each occurrence of each quote is counted as one measure (so a quote which was repeated many times will have a larger weight).
+Let's also have a look at the length, topics and expressed sentiments across quotes in our dataset. Once again, keep in mind that, in the following plots, each occurrence of each quote is counted as one measure (so a quote will be more important in our analysis).
 
 
 ### How long are the quotes?
@@ -146,10 +147,10 @@ As we can see, the most common topics are ......................................
 
 
 ## What we wanted from BertTopic and what we expected  :
-To explain briefly without going into mathematical details, BertTopic allows us to group tweets into dense clusters defined around subjects. There are also very interesting visualisation tools packaged with the modelling technique. In our case, we expected the tool to give us clusters based on popular subjects in english newspapers (Trump, american football…), which would allow us to define more clearly what is popular and what isn’t in this kind of press.
+To explain briefly without going into mathematical details, BertTopic allows us to group tweets into dense clusters defined around subjects. There are also very interesting visualisation tools packaged with the model. In our case, we expected the tool to give us clusters based on popular subjects in english newspapers (Politics, Trump, american football…), which would allow us to define more clearly what is popular and what isn’t in this kind of press. We also want to see if there are any unexpected topics that pop up in top popularity.
 
 ## The results of bertTopic : 
-=> show the topic split and comment on the fact that it just shows the basic distribution of newspaper stories (politics then sports with specifically american football then research breakthroughs etc)
+Here's a quick snapshot of the top topics from our dataset :
 
 <div align="center"> {%include plotly_graphs/visualize_topics.html%}</div>
 
@@ -168,16 +169,10 @@ To explain briefly without going into mathematical details, BertTopic allows us 
 | 9     | racing, laps, qualifying, ferrari, nascar, f1, raced, tyres, prix, motorsport                           |
 | 10    | stock, investors, earnings, shareholders, markets, stocks, dividend, equity, shares, shareholder        |
 
-From the BerTopic model we have extracted the most relevant topics observed in the dataset. The most frequent topic contains female pronouns and names of the most relevant symbol of the female gender like Hillary Clinton. This is quite surprising since in the previous sections we have observed that female speakers are far less represented in the number of quotes with respect to male. One reason for why we may observe such a frequent topic may be due to the 2016 Unites States of America elections, which was certainly an event that was given huge media coverage, and one in which Donald Trump did not refrain from using Hilary Clinton's name in multiple occasions. The second most frequent topic can be labeled as education. This result can be expected since it also is a common discussion topic in politics. Other topics that appears to be also relevant in the newspaper are related to sports like American football, baseball, fighting sports, football, and racing. This result too can be explained with the information obtained in the previous sections, since we have observed that males of USA nationality that plays American football and males of UK nationality playing football represent a big portion of the total quotes.
+From the BerTopic model we have extracted the most relevant topics observed in the dataset. The most frequent topic contains female pronouns and names of the most relevant symbol of the female gender like Hillary Clinton. This is quite surprising since in the previous sections we have observed that female speakers are far less represented in the number of quotes with respect to male. One reason for why we may observe such a frequent topic may be due to the 2016 United States of America elections, which was certainly an event that was given huge media coverage, and one in which Donald Trump did not refrain from using Hilary Clinton's name in multiple occasions. The second most frequent topic can be labeled as education. This result can be expected since it also is a common discussion topic in politics. Other topics that appears to be also relevant in the newspaper are related to sports like American football, baseball, fighting sports, football, and racing. This result too can be explained with the information obtained in the previous sections, since we have observed that males of USA nationality that plays American football and males of UK nationality playing football represent a big portion of the total quotes.
+
 
 <div align="center"> {%include plotly_graphs/visualize_hierarchy.html%}</div>
-
-
-
-
-
-
-
 
 
 As a last sanity check, instead of studying data piece by piece, we tried pairing them in what is called co-occurences matrixes. This allows us to be on the lookout for weird relations between data and think 2D instead of simply 1D : 
@@ -185,4 +180,6 @@ The male/female distribution over nations remains the same. We also notice that 
 Again, this reinforces the fact that our model will learn to think about popularity from an American based point of view, and might miss out on crucial factors if applied to other countries newspapers later on.
 
 
-So even though we have used very basic tools, we can see how much information we extracted from the dataset and how much better we can understand if our model takes weird decisions and makes errors. Being a data scientist isn't only about being cool and using neural nets, it's also important to understand the base on which you build everything else!
+So even though we have used very basic tools, we can see how much information we extracted from the dataset and how much better we can understand if our model takes weird decisions and makes errors. Being a data scientist isn't only about being cool and using neural nets, it's also important to understand the base on which you build everything else! If you are interested in looking at more of our findings on data, don't hesitate to consult the comments in the source codes explaining more interesting relations and info extracted from our analysis. 
+
+
